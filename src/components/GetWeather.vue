@@ -5,7 +5,7 @@ const weather = ref(null)
 
 async function fetchWeather() {
   const res = await fetch(
-    `https://api.open-meteo.com/v1/forecast?latitude=35.69&longitude=139.69&hourly=temperature_2m`
+    `https://api.open-meteo.com/v1/forecast?latitude=34.07&longitude=134.57&daily=weathercode,temperature_2m_max,temperature_2m_min,sunrise,sunset&windspeed_unit=ms&timezone=Asia%2FTokyo`
   )
   weather.value = await res.json()
 }
